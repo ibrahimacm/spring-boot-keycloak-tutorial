@@ -5,8 +5,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -27,11 +25,6 @@ class ProductController {
 	public String getProducts(Model model){
 		model.addAttribute("products", Arrays.asList("iPad","iPhone","iPod"));
 		return "products";
-	}
-
-	@GetMapping("/ping")
-	private String verify() {
-		return "PINGO web app is up";
 	}
 
 	@GetMapping(path = "/logout")
