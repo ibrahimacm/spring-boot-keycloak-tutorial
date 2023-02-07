@@ -7,7 +7,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -32,7 +31,6 @@ class ProductController {
 
 	@GetMapping("/ping")
 	private String verify() {
-		logger.info("a call was made to check system settings is up, answer was yes ");
 		return "PINGO web app is up";
 	}
 
